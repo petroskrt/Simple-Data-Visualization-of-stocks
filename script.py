@@ -37,7 +37,6 @@ for ticker in tickers:
     # Close column of Alpha Vantage is called '4. close'
     data_by_ticker[ticker] = df['4. close'].rename(ticker)
     
-    # free api keys are limited to 5 requests per minute and 25 per day. It spaces calls out to stay under that
     time.sleep(15)
     
 # Combine all tickers' closing prices into one DataFrame, aligned by date
